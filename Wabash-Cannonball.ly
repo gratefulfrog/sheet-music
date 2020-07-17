@@ -43,7 +43,7 @@ notesIV = {
 melody = 
   \relative {
   \override Score.MetronomeMark.padding = #3
-  \tempo "lively" 4 = 120
+  \tempo "lively" 4 = 140
   \key g \major
   \notesI
   \notesII
@@ -74,9 +74,9 @@ chorus = \lyricmode{
 }
 
 \score {
-\new Staff \with {midiInstrument = "electric guitar (clean)"} {
-  <<
-   \new ChordNames {
+  \new Staff \with {midiInstrument = "acoustic guitar (steel)"}
+   { 
+   <<   \new ChordNames {
      \set chordChanges = ##t
      \harmonies 
       }
