@@ -84,7 +84,7 @@ verseI = \lyricmode{
 
 verseII = \lyricmode{
   \set stanza = "2."
-  Our eastern states are dan -- dy, so the peo -- ple always say.
+  Our eastern states are dan -- dy, the peo -- ple al -- ways say.
   From _ New York to St. Lou -- is, and Chic -- ago by the way,
   from the hills of Min -- ne _ so -- ta, where the ripp -- ling wat -- ers fall,  
   No chang -- es can be tak -- en, on the Wab -- ash Can -- non -- ball!
@@ -143,7 +143,6 @@ verseIV = \lyricmode{
 
   >>
   \layout {}
-  %\midi {}
 }
 
 \score {  
@@ -158,6 +157,7 @@ verseIV = \lyricmode{
       %\set Staff.midiInstrument = #"acoustic guitar (steel)"
       \unfoldRepeats { 
       \repeat volta 7{
+        \tempo "lively" 4 = 140
         \allNotesMidi
         }
       }
@@ -165,8 +165,8 @@ verseIV = \lyricmode{
   >>
   %\layout{}
   \midi {
-    \context {
-      \Score tempoWholesPerMinute = #(ly:make-moment 160 4)
-    }
+    %\context {
+     % \Score tempoWholesPerMinute = #(ly:make-moment 260 4)
+    %}
   }
 }
