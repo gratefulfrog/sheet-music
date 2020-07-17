@@ -22,6 +22,13 @@ notesI =  {
   b b a g
   c,2. e8 e
 }
+notesImidi =  {
+  d4 d g a
+  b d'2  b4
+  b b a g
+  c2. e8 e
+}
+
 notesII = {
   d4 d fis a
   b a2 a4
@@ -34,6 +41,12 @@ notesIII = {
   b4 b a g 
   c,2. e4
 }
+notesIIImidi = {
+  d4 d g a8 a
+  b4 d'2 b8 b
+  b4 b a g 
+  c2. e4
+}
 notesIV = {
   d4 d fis a
   b a2 a8 a
@@ -44,6 +57,12 @@ allNotes = {
   \notesI
   \notesII
   \notesIII
+  \notesIV
+}
+allNotesMidi = {
+  \notesImidi
+  \notesII
+  \notesIIImidi
   \notesIV
 }
 melody = 
@@ -89,6 +108,7 @@ chorusNo = \lyricmode{
   _
 }
 verseIV = \lyricmode{
+  \set stanza = "4."
   Here's to Dad -- dy Clax -- ton, may his name for -- ever stand.
   And _ al -- ways be re -- mem -- bered in the courts throughout the land.
   His _ earth -- ly race is _ o -- ver and we'll bear him to the pall.
@@ -125,29 +145,28 @@ verseIV = \lyricmode{
   \layout {}
   %\midi {}
 }
-%{
-%\score {  
+
+\score {  
   <<
     \new Staff { 
     %\relative c
-      %\myKey
-      %\set Staff.midiInstrument = #"electric guitar (jazz)"
+      \set Staff.midiInstrument = #"electric guitar (jazz)"
       %\set Staff.midiInstrument = #"electric guitar (clean)"
       %\set Staff.midiInstrument = #"electric guitar (muted)"
       %\set Staff.midiInstrument = #"overdriven guitar"
       %\set Staff.midiInstrument = #"distorted guitar"
       %\set Staff.midiInstrument = #"acoustic guitar (steel)"
       \unfoldRepeats { 
-      \repeat volta 6{
-	      \allNotes
+      \repeat volta 7{
+        \allNotesMidi
         }
       }
     }
   >>
+  %\layout{}
   \midi {
     \context {
       \Score tempoWholesPerMinute = #(ly:make-moment 160 4)
     }
   }
 }
-%}
