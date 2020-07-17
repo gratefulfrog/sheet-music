@@ -36,12 +36,6 @@ notesI =  {
   b b a g   |
   c,2. e8 e |
 }
-notesImidi =  {
-  d4 d g a  |
-  b d'2  b4 |
-  b b a g   |
-  c2. e8 e  |
-}
 
 notesII = {
   d4 d fis a   |
@@ -55,12 +49,7 @@ notesIII = {
   b4 b a g     |
   c,2. e4      |
 }
-notesIIImidi = {
-  d4 d g a8 a |
-  b4 d'2 b8 b |
-  b4 b a g    |
-  c2. e4      |
-}
+
 notesIV = {
   d4 d fis a   |
   b a2 a8 a    |
@@ -71,12 +60,6 @@ allNotes = {
   \notesI
   \notesII
   \notesIII
-  \notesIV
-}
-allNotesMidi = {
-  \notesImidi
-  \notesII
-  \notesIIImidi
   \notesIV
 }
 
