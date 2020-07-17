@@ -74,9 +74,10 @@ chorus = \lyricmode{
 }
 
 \score {
-  \new Staff \with {midiInstrument = "acoustic guitar (steel)"}
+  %\new Staff %\with {midiInstrument = "acoustic guitar (steel)"}
    { 
-   <<   \new ChordNames {
+   <<   
+   \new ChordNames {
      \set chordChanges = ##t
      \harmonies 
       }
