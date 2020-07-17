@@ -120,12 +120,13 @@ verseIV = \lyricmode{
       \relative
       \allNotes   
     }
+
   >>
   \layout {}
   %\midi {}
 }
-
-\score {  
+%{
+%\score {  
   <<
     \new Staff { 
     %\relative c
@@ -149,3 +150,4 @@ verseIV = \lyricmode{
     }
   }
 }
+%}
