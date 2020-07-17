@@ -55,26 +55,26 @@ verseI = \lyricmode{
     From the great  Atlantic oc -- ean, to the wide Pa -- cific shore,
     she climbs ov -- er flow -- ery moun -- tains, over hills and by the shore.
     Hear the  migh -- ty rush of the en -- gines, hear the lone -- some ho -- bo's call.
-    We're rid -- ing thru to Di -- xie on the Wab -- ash Can -- non -- ball!
+    We're rid -- ing thru to Di -- xie, on the Wab -- ash Can -- non -- ball!
 }
 
 verseII = \lyricmode{
   \set stanza = "2."
   Our eastern states are dan -- dy, so the peo -- ple always say.
-  From _ New York to St. Lou -- is and Chic -- ago by the way,
-  from the hills of Min -- ne _ so -- ta where the ripp -- ling wat -- ers fall,  
+  From _ New York to St. Lou -- is, and Chic -- ago by the way,
+  from the hills of Min -- ne _ so -- ta, where the ripp -- ling wat -- ers fall,  
   no chang -- es can be tak -- en, on the Wab -- ash Can -- non -- ball!
 }
 chorus = \lyricmode{
   \set stanza = "chorus"
-  List -- en to the jin -- gle, the rum -- ble and the roar,
+  List -- en to the jin -- gle, the rum -- ble and the roar.
   As she glides a -- long the wood -- land, by hills and by the shore.
   Hear the migh -- ty rush of the en -- gine, hear that lone -- some ho -- bo's call,
-  We're rid -- ing through the jung -- le on the Wab -- ash Can -- non -- ball
+  We're rid -- ing through the jung -- le, on the Wab -- ash Can -- non -- ball
 }
 
 \score {
-  %\new Staff %\with {midiInstrument = "acoustic guitar (steel)"}
+  %\new Staff \with {midiInstrument = "acoustic guitar (steel)"}
    { 
    <<   
    \new ChordNames {
