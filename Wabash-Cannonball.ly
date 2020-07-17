@@ -40,17 +40,20 @@ notesIV = {
   fis4 d e fis 
   g1 
 }
+  allNotes = {
+  \notesI
+  \notesII
+  \notesIII
+  \notesIV
+}
 melody = 
   \relative 
   \repeat volta 3{
   \override Score.MetronomeMark.padding = #3
   \tempo "lively" 4 = 140
   \key g \major
-  \notesI
-  \notesII
-  \notesIII
-  \notesIV
-}
+  \allNotes
+  }
 verseI = \lyricmode{
   \set stanza = "1."
     From the great  Atlantic oc -- ean, to the wide Pa -- cific shore,
@@ -84,7 +87,7 @@ chorusNo = \lyricmode{
   \set stanza = "chorus"
   _
 }
-\verseIV = \lyricmode{
+verseIV = \lyricmode{
   Here's to Dad -- dy Clax -- ton, may his name for -- ever stand.
   And _ al -- ways be re -- mem -- bered in the courts throughout the land.
   His _ earth -- ly race is _ o -- ver and we'll bear him to the pall.
@@ -92,15 +95,15 @@ chorusNo = \lyricmode{
 }
 
 \score {
-  %\new Staff \with {midiInstrument = "acoustic guitar (steel)"}
    { 
    <<   
    \new ChordNames {
      \set chordChanges = ##t
      \harmonies 
       }
-   \new Voice = "one" {\melody}
-   \addlyrics{ \verseI }
+   \new Staff {
+    \melody
+    }
    \addlyrics{ \verseII }
    \addlyrics{ \chorus }
    \addlyrics{ \verseIII }
