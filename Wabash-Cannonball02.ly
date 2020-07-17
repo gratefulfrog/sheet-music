@@ -147,11 +147,11 @@ verseIV = \lyricmode{
   }
   \addlyrics{ \verseI }
   \addlyrics{ \verseII }
-  \addlyrics{ \chorus }
+  \addlyrics{ \chorusNo }
   \addlyrics{ \verseIII }
   \addlyrics{ \chorusNo }
   \addlyrics{ \verseIV }
-  \addlyrics{ \chorusNo }
+  \addlyrics{ \chorus }
    \new TabStaff  {
       \tabFullNotation
       \stemDown
