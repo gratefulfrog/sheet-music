@@ -84,9 +84,15 @@ chorusNo = \lyricmode{
   \set stanza = "chorus"
   _
 }
+\verseIV = \lyricmode{
+  Here's to Dad -- dy Clax -- ton, may his name for -- ever stand.
+  And _ al -- ways be re -- mem -- bered in the courts throughout the land.
+  His _ earth -- ly race is _ o -- ver and we'll bear him to the pall.
+  We'll carry him up to hea -- ven, on the Wa -- bash Can -- non -- ball!
+}
 
 \score {
-  \new Staff \with {midiInstrument = "acoustic guitar (steel)"}
+  %\new Staff \with {midiInstrument = "acoustic guitar (steel)"}
    { 
    <<   
    \new ChordNames {
@@ -98,6 +104,8 @@ chorusNo = \lyricmode{
    \addlyrics{ \verseII }
    \addlyrics{ \chorus }
    \addlyrics{ \verseIII }
+   \addlyrics{ \chorusNo }
+   \addlyrics{ \verseIV }
    \addlyrics{ \chorusNo }
   >>
   }
