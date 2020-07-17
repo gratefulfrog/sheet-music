@@ -152,6 +152,13 @@ verseIV = \lyricmode{
   \addlyrics{ \chorusNo }
   \addlyrics{ \verseIV }
   \addlyrics{ \chorusNo }
+   \new TabStaff  {
+      \tabFullNotation
+      \stemDown
+      \set TabStaff.restrainOpenStrings = ##t
+      \relative c
+      \allNotes   
+    }
   >>
   \layout {}
 }
@@ -162,10 +169,10 @@ verseIV = \lyricmode{
     \key g \major
      %\set Staff.midiInstrument = #"electric guitar (jazz)"
       %\set Staff.midiInstrument = #"electric guitar (clean)"
-      \set Staff.midiInstrument = #"electric guitar (muted)"
+      %\set Staff.midiInstrument = #"electric guitar (muted)"
       %\set Staff.midiInstrument = #"overdriven guitar"
       %\set Staff.midiInstrument = #"distorted guitar"
-      %\set Staff.midiInstrument = #"acoustic guitar (steel)"
+      \set Staff.midiInstrument = #"acoustic guitar (steel)"
     \speed
     \relative c'
     \unfoldRepeats{
