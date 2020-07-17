@@ -54,6 +54,7 @@ melody =
   \key g \major
   \allNotes
   }
+
 verseI = \lyricmode{
   \set stanza = "1."
     From the great  Atlantic oc -- ean, to the wide Pa -- cific shore,
@@ -120,8 +121,6 @@ verseIV = \lyricmode{
       \allNotes   
     }
   >>
-
-  
   \layout {}
   \midi {}
 }
