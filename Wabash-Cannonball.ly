@@ -78,7 +78,7 @@ verseIII = \lyricmode{
   We rolled into Birm -- ing -- ham, one cold De -- cem -- ber day.
   As she pulled in -- to the sta -- tion, you could hear the people say:
   There's a gal _ out there from Tex -- as, she is long and she is tall.
-  She's a reg -- uler com -- bin -- ation on the Wab -- ash Can -- non -- ball!
+  She's a reg -- uler com -- bin -- ation, on the Wab -- ash Can -- non -- ball!
 }
 chorusNo = \lyricmode{
   \set stanza = "chorus"
@@ -86,7 +86,7 @@ chorusNo = \lyricmode{
 }
 
 \score {
-  %\new Staff \with {midiInstrument = "acoustic guitar (steel)"}
+  \new Staff \with {midiInstrument = "acoustic guitar (steel)"}
    { 
    <<   
    \new ChordNames {
