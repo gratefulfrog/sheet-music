@@ -16,9 +16,9 @@ harmonies = \chordmode {
   \chordsI 
   \chordsII 
 }
-notesI = {
+notesI =  {
   d4 d g a
-  b d2 b4
+  b d2  b4
   b b a g
   c,2. e8 e
 }
@@ -111,7 +111,7 @@ verseIV = \lyricmode{
    \addlyrics{ \chorusNo }
    \addlyrics{ \verseIV }
    \addlyrics{ \chorusNo }
-    \new TabStaff  \relative  {
+    \new TabStaff  \relative {
       %\override Staff.TimeSignature #'style = #'()
       \tabFullNotation
       \stemDown
@@ -122,5 +122,30 @@ verseIV = \lyricmode{
     }
   >>
   \layout {}
-  \midi {}
+  %\midi {}
+}
+
+\score {  
+  <<
+    \new Staff { 
+    %\relative c
+      %\myKey
+      %\set Staff.midiInstrument = #"electric guitar (jazz)"
+      %\set Staff.midiInstrument = #"electric guitar (clean)"
+      %\set Staff.midiInstrument = #"electric guitar (muted)"
+      %\set Staff.midiInstrument = #"overdriven guitar"
+      %\set Staff.midiInstrument = #"distorted guitar"
+      %\set Staff.midiInstrument = #"acoustic guitar (steel)"
+      \unfoldRepeats { 
+      \repeat volta 6{
+	      \allNotes
+        }
+      }
+    }
+  >>
+  \midi {
+    \context {
+      \Score tempoWholesPerMinute = #(ly:make-moment 160 4)
+    }
+  }
 }
