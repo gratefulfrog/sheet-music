@@ -67,7 +67,7 @@ verseII = \lyricmode{
   Our eastern states are dan -- dy, so the peo -- ple always say.
   From _ New York to St. Lou -- is, and Chic -- ago by the way,
   from the hills of Min -- ne _ so -- ta, where the ripp -- ling wat -- ers fall,  
-  no chang -- es can be tak -- en, on the Wab -- ash Can -- non -- ball!
+  No chang -- es can be tak -- en, on the Wab -- ash Can -- non -- ball!
 }
 chorus = \lyricmode{
   \set stanza = "chorus"
