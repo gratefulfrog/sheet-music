@@ -74,6 +74,7 @@ chorus = \lyricmode{
 }
 
 \score {
+\new Staff \with {midiInstrument = "electric guitar (clean)"} {
   <<
    \new ChordNames {
      \set chordChanges = ##t
@@ -84,6 +85,7 @@ chorus = \lyricmode{
    \addlyrics{ \verseII }
    \addlyrics{ \chorus }
   >>
+  }
   \layout {}
   \midi {}
 }
