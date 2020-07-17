@@ -9,7 +9,7 @@
 
 \paper{
   ragged-bottom=##t
-  %bottom-margin=0\mm
+  bottom-margin=0\mm
   %page-count = 1
 }
 
@@ -82,10 +82,10 @@ allNotesMidi = {
 
 verseI = \lyricmode{
   \set stanza = "1."
-    From the great  Atlantic oc -- ean, to the wide Pa -- cific shore,
-    she climbs ov -- er flow -- ery moun -- tains, over hills and by the shore.
-    Hear the  might -- y rush of the en -- gines, hear the lone -- some ho -- bo's call.
-    We're rid -- ing thru to Di -- xie, on the Wab -- ash Can -- non -- ball!
+    From the great  Atlantic | oc -- ean, to | the wide Pa -- cific | shore,
+    she climbs | ov -- er flow -- ery | moun -- tains, over | hills and by the | shore.
+    Hear the |  might -- y rush of the | en -- gine, hear the | lone -- some ho -- bo's | call.
+    We're | rid -- ing thru to  | Di -- xie, on the | Wab -- ash Can -- non -- | ball!
 }
 
 verseII = \lyricmode{
