@@ -14,7 +14,7 @@
 }
 
 chordsI = \chordmode{
-  g1 | g  | g | c | \break
+  g1 | g | g | c| \break
   }
 chordsII = \chordmode{
   d1:7 | d1:7 | d1:7 | g | \break
@@ -113,10 +113,10 @@ verseI = \lyricmode{
     \key g \major
      %\set Staff.midiInstrument = #"electric guitar (jazz)"
       %\set Staff.midiInstrument = #"electric guitar (clean)"
-      %\set Staff.midiInstrument = #"electric guitar (muted)"
+      \set Staff.midiInstrument = #"electric guitar (muted)"
       %\set Staff.midiInstrument = #"overdriven guitar"
       %\set Staff.midiInstrument = #"distorted guitar"
-      \set Staff.midiInstrument = #"acoustic guitar (steel)"
+      %\set Staff.midiInstrument = #"acoustic guitar (steel)"
     \speed
     \allChords
   }
