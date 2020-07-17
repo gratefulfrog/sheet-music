@@ -17,7 +17,7 @@ harmonies = \chordmode {
   \chordsII 
 }
 notesI = {
-  d'4 d g a
+  d4 d g a
   b d2 b4
   b b a g
   c,2. e8 e
@@ -40,15 +40,15 @@ notesIV = {
   fis4 d e fis 
   g1 
 }
-  allNotes = {
+allNotes = {
   \notesI
   \notesII
   \notesIII
   \notesIV
 }
 melody = 
-  \relative 
-  \repeat volta 3{
+  \relative c'
+  \repeat volta 6{
   \override Score.MetronomeMark.padding = #3
   \tempo "lively" 4 = 140
   \key g \major
@@ -95,7 +95,6 @@ verseIV = \lyricmode{
 }
 
 \score {
-   { 
    <<   
    \new ChordNames {
      \set chordChanges = ##t
@@ -104,14 +103,25 @@ verseIV = \lyricmode{
    \new Staff {
     \melody
     }
+   \addlyrics{ \verseI }
    \addlyrics{ \verseII }
    \addlyrics{ \chorus }
    \addlyrics{ \verseIII }
    \addlyrics{ \chorusNo }
    \addlyrics{ \verseIV }
    \addlyrics{ \chorusNo }
+    \new TabStaff  \relative  {
+      %\override Staff.TimeSignature #'style = #'()
+      \tabFullNotation
+      \stemDown
+      \set TabStaff.restrainOpenStrings = ##t
+      %\override Beam #'damping = #+inf.0
+      \relative
+      \allNotes   
+    }
   >>
-  }
+
+  
   \layout {}
   \midi {}
 }
