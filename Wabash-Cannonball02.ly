@@ -10,7 +10,7 @@
 \paper{
   ragged-bottom=##t
   %bottom-margin=0\mm
-  page-count = 1
+  %page-count = 1
 }
 
 chordsI = \chordmode{
@@ -88,26 +88,75 @@ verseI = \lyricmode{
     We're rid -- ing thru to Di -- xie, on the Wab -- ash Can -- non -- ball!
 }
 
+verseII = \lyricmode{
+  \set stanza = "2."
+  Our eastern states are dan -- dy, the peo -- ple al -- ways say.
+  From _ New York to St. Lou -- is, and Chic -- ago by the way,
+  from the hills of Min -- ne _ so -- ta, where the ripp -- ling wat -- ers fall,  
+  No chang -- es can be tak -- en, on the Wab -- ash Can -- non -- ball!
+}
+chorus = \lyricmode{
+  \set stanza = "chorus"
+  List -- en to the jin -- gle, the rum -- ble and the roar.
+  As she glides a -- long the wood -- land, by hills and by the shore.
+  Hear the migh -- ty rush of the en -- gine, hear that lone -- some ho -- bo's call,
+  We're rid -- ing through the jung -- le, on the Wab -- ash Can -- non -- ball
+}
+verseIII = \lyricmode{
+  \set stanza = "3."
+  We rolled into Birm -- ing -- ham, one cold De -- cem -- ber day.
+  As she pulled in -- to the sta -- tion, you could hear the people say:
+  There's a gal _ out there from Tex -- as, she is long and she is tall.
+  She's a reg -- uler com -- bin -- ation, on the Wab -- ash Can -- non -- ball!
+}
+chorusNo = \lyricmode{
+  \set stanza = "chorus"
+  _
+}
+verseIV = \lyricmode{
+  \set stanza = "4."
+  Here's to Dad -- dy Clax -- ton, may his name for -- ever stand.
+  And _ al -- ways be re -- mem -- bered in the courts throughout the land.
+  His _ earth -- ly race is _ o -- ver and we'll bear him to the pall.
+  We'll carry him up to hea -- ven, on the Wa -- bash Can -- non -- ball!
+}
 
 
 \score {
   <<
+  \new ChordNames {
+     \set chordChanges = ##t
+     \allChords 
+  }
   \new Staff {
     %\set Staff.midiInstrument = #"electric guitar (jazz)"
     %\set Staff.midiInstrument = #"electric guitar (clean)"
     %\set Staff.midiInstrument = #"electric guitar (muted)"
     %\set Staff.midiInstrument = #"overdriven guitar"
     %\set Staff.midiInstrument = #"distorted guitar"
-    \set Staff.midiInstrument = #"acoustic guitar (steel)"
+    %\set Staff.midiInstrument = #"acoustic guitar (steel)"
     
     \clef treble
+    \override Score.MetronomeMark.padding = #3
     \key g \major
     \speed
     \relative c'
-    \allNotes
+    \repeat volta 7{
+      \allNotes
+    }
   }
   \addlyrics{ \verseI }
-
+  \addlyrics{ \verseII }
+  \addlyrics{ \chorus }
+  \addlyrics{ \verseIII }
+  \addlyrics{ \chorusNo }
+  \addlyrics{ \verseIV }
+  \addlyrics{ \chorusNo }
+  >>
+  \layout {}
+}
+\score {
+  <<
   \new Staff {
     \clef treble
     \key g \major
@@ -118,12 +167,33 @@ verseI = \lyricmode{
       %\set Staff.midiInstrument = #"distorted guitar"
       %\set Staff.midiInstrument = #"acoustic guitar (steel)"
     \speed
-    \allChords
+    \relative c'
+    \unfoldRepeats{
+      \repeat volta 7{
+        \allNotes
+        %\allChords
+      }
+    }
   }
-  
-   
-  
+   \new Staff {
+    \clef treble
+    \key g \major
+     %\set Staff.midiInstrument = #"electric guitar (jazz)"
+      %\set Staff.midiInstrument = #"electric guitar (clean)"
+      \set Staff.midiInstrument = #"electric guitar (muted)"
+      %\set Staff.midiInstrument = #"overdriven guitar"
+      %\set Staff.midiInstrument = #"distorted guitar"
+      %\set Staff.midiInstrument = #"acoustic guitar (steel)"
+    \speed
+    \relative c'
+    \unfoldRepeats{
+      \repeat volta 7{
+        %\allNotes
+        \allChords
+      }
+    }
+  }
   >>
-  \layout {}
-  \midi {}
+  %\layout{}
+  \midi{}
 }
