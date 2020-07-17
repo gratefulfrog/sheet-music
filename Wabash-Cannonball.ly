@@ -41,7 +41,8 @@ notesIV = {
   g1 
 }
 melody = 
-  \relative {
+  \relative 
+  \repeat volta 3{
   \override Score.MetronomeMark.padding = #3
   \tempo "lively" 4 = 140
   \key g \major
@@ -72,6 +73,17 @@ chorus = \lyricmode{
   Hear the migh -- ty rush of the en -- gine, hear that lone -- some ho -- bo's call,
   We're rid -- ing through the jung -- le, on the Wab -- ash Can -- non -- ball
 }
+verseIII = \lyricmode{
+  \set stanza = "3."
+  We rolled into Birm -- ing -- ham, one cold De -- cem -- ber day.
+  As she pulled in -- to the sta -- tion, you could hear the people say:
+  There's a gal _ out there from Tex -- as, she is long and she is tall.
+  She's a reg -- uler com -- bin -- ation on the Wab -- ash Can -- non -- ball!
+}
+chorusNo = \lyricmode{
+  \set stanza = "chorus"
+  _
+}
 
 \score {
   %\new Staff \with {midiInstrument = "acoustic guitar (steel)"}
@@ -85,6 +97,8 @@ chorus = \lyricmode{
    \addlyrics{ \verseI }
    \addlyrics{ \verseII }
    \addlyrics{ \chorus }
+   \addlyrics{ \verseIII }
+   \addlyrics{ \chorusNo }
   >>
   }
   \layout {}
